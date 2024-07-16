@@ -1,5 +1,5 @@
 {% set name = "drf-pydantic" %}
-{% set version = "2.3.0" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/drf_pydantic-{{ version }}.tar.gz
-  sha256: 476bb6c9bb6031b63093d959ee20372b6863d663c6589bc44bd4ddc853539c42
+  sha256: 636b607c0e278c13a29f37c219c9d4e0e44ec8be02dfba377c6ce3ccb748900b
 
 build:
   noarch: python
