@@ -1,5 +1,5 @@
 {% set name = "drf-pydantic" %}
-{% set version = "2.5.1" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/drf_pydantic-{{ version }}.tar.gz
-  sha256: 3165c3312ff3057ee307f79eb7ccdc456abd917f7b601b4d64ce9dd3e7b20397
+  sha256: a4a2eb74728871137974bd041938f681de2a884b855069ba8d3858f4d4cd52fa
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,8 +21,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }},<4.0.0
-    - pydantic >=2.0.0,<3.0.0
-    - djangorestframework >=3.13.0,<4.0.0
+    - pydantic >=2.0.0
+    - djangorestframework >=3.13.0
 
 test:
   imports:
