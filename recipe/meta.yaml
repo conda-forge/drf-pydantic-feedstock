@@ -1,5 +1,5 @@
 {% set name = "drf-pydantic" %}
-{% set version = "2.5.1" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,22 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/drf_pydantic-{{ version }}.tar.gz
-  sha256: 3165c3312ff3057ee307f79eb7ccdc456abd917f7b601b4d64ce9dd3e7b20397
+  sha256: 12298fa827246a3ea3d5371f4903874b333edd8b459605198d65f637cfe7081f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core >=1.0.0
+    - hatchling
     - pip
   run:
     - python >={{ python_min }},<4.0.0
-    - pydantic >=2.0.0,<3.0.0
-    - djangorestframework >=3.13.0,<4.0.0
+    - pydantic >=2.0.0
+    - djangorestframework >=3.13.0
 
 test:
   imports:
