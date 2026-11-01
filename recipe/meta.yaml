@@ -1,5 +1,5 @@
 {% set name = "drf-pydantic" %}
-{% set version = "2.9.2" %}
+{% set version = "2.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/drf_pydantic-{{ version }}.tar.gz
-  sha256: cf909c9120079d212ed71406f775e5c7005768205a247c75e9ae2ffaf10ecc25
+  sha256: 411764ea80355a7fd7c666dc6b731705fd5573c5bcd9c856f2f5d65af8b09d2f
 
 build:
   noarch: python
